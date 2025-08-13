@@ -110,7 +110,11 @@ class RAGModel(mlflow.pyfunc.PythonModel):
             final_answer = self._generate_answer(question, documents)
             answers.append(final_answer)
 
-        return pd.DataFrame({"answer": answers})
+        return pd.DataFrame({
+            "answer": [final_answer],
+            "retrieved_documents": [str(documents)] # Serialize documents to a string
+        })
+
     
 # --- Model Instantiation for MLflow ---
 # This block runs when MLflow loads the model from the code_path.
