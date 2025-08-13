@@ -1,0 +1,11 @@
+# Azure SDK
+azure-ai-documentintelligence
+azure-ai-ml
+azure-identity
+azure-storage-blob
+
+# LangChain
+langchain
+langchain-hub
+langchain-openai
+langchain-community
